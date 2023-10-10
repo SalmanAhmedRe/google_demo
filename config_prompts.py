@@ -14,6 +14,8 @@ class ConfigPrompt:
         instructions_output = self.get_instructions_output_prompt()
         self.summarise_prompt = self.prepare_system_prompt(summarise_system_prompt, instructions_output)
 
+################################################################################
+
     def get_instructions_output_prompt(self,):
         """
         Please only add instructions that refines the answer. (Do not add instructions that require additional code generation)
@@ -33,6 +35,8 @@ Then suggest reasons based on that.
 - At the end of the narrative provide a prediction of what the next most relevant question to ask would be. Put this in parenthesis.
 """
 
+################################################################################
+    
     def prepare_system_prompt(self, summarise_system_prompt, instructions_output):
         return f"{summarise_system_prompt}\n\n{instructions_output}"
 
@@ -46,6 +50,8 @@ Try to make the output in nice looking format, but be as concise as possible.
 Do not, add full form of abbreviations in the summary.
 """
 
+################################################################################
+    
     def get_dataframe_features_info(self,):
         return """Data Explaination Format is as follows:
 ~ Column Name: [`Data Type`] ~ [If categorical then unique values] ~ [`description`]
@@ -71,6 +77,8 @@ The dataframe `df` has the following Date columns:
     ~ Date: [date, format: yyyy/mm/dd] ~ [] ~ []
 """
 
+################################################################################
+    
     def get_code_prompt(self, question):
         if "plot" in question.lower():
             unique_filename = str(uuid.uuid4())
