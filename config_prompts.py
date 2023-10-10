@@ -50,6 +50,7 @@ The code can print calculations with descriptions.
 You need to provide a concise summary of the output, If the output includes any numbers, make sure to summarise them.
 Try to make the output in nice looking format, but be as concise as possible. 
 Do not, add full form of abbreviations in the summary.
+Make sure, output is well structured and lines are properly separated.
 """
 
     def get_dataframe_features_info(self,):
