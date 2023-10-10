@@ -11,8 +11,9 @@ from config_prompts import ConfigPrompt
 
 class DemoGoogle:
     
-    def __init__(self, api_key):
-        openai.api_key = api_key
+    def __init__(self, api_key = None):
+        if api_key:
+            openai.api_key = api_key
         self.version = "Demo Version"
         self.ConfigPrompt = ConfigPrompt(csv_path="MQL_dummy.csv")
         self.CodeExecutor = CodeExecutor()
