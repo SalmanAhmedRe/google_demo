@@ -33,6 +33,8 @@ For example, if you find that there is a peak of MQLs that were not dispositione
 Then suggest reasons based on that.
 - You should always provide another compelling insight that is related to the question asked, but uses other variables in the dataset. This insight should come after the first narrative.
 - At the end of the narrative provide a prediction of what the next most relevant question to ask would be. Put this in parenthesis.
+- Make sure that sentences are well structured with new lines.
+
 """
 
 ################################################################################
